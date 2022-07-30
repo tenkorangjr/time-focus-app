@@ -3,8 +3,9 @@ import time
 from math import floor
 import sys
 
+
 sys.setrecursionlimit(100000)  # avoid recursion error
-# ---------------------------- CONSTANTS ------------------------------- #
+
 PINK = "#e2979c"
 RED = "#e7305b"
 GREEN = "#9bdeac"
@@ -16,8 +17,6 @@ LONG_BREAK_MIN = 20
 rep = 0
 counter = True
 
-# ---------------------------- TIMER RESET ------------------------------- #
-
 
 def reset():
     """Resetting edited global variable and the Tk screen"""
@@ -28,8 +27,6 @@ def reset():
     timer_label.config(text="Timer")
     check_mark.config(text="")
     rep = 0
-
-# ---------------------------- TIMER MECHANISM ------------------------------- #
 
 
 def start():
@@ -50,8 +47,6 @@ def start():
         timer_label.config(text="WORK", fg=GREEN)
         count_down(work_sec)
 
-
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 def count_down(count):
     """Does the countdown for the Pomodoro App"""
@@ -85,7 +80,7 @@ def count_down(count):
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
-window.title("My Pomodoro App")
+window.title("Pomodoro Focus App")
 window.config(padx=100, pady=50, bg=YELLOW)
 
 
